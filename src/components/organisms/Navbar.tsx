@@ -71,7 +71,7 @@ export const Navbar: React.FC = () => {
 
             {/* Center: Official AaurOSHe Brand Logo */}
             <div className="text-center shrink-0 px-2 sm:px-4 py-1">
-              <Logo size="md" variant="dark" showTagline={true} />
+              <Logo size="lg" variant="dark" showTagline={true} />
             </div>
 
             {/* Right: Currency, Admin Portal, Shopping Bag */}
