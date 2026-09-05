@@ -1,19 +1,19 @@
 /**
- * Brand Constants for AAUROSHE
+ * Brand Constants for AaurOSHe
  * Central immutable definitions for brand identity, navigation, and luxury attributes
  */
 
 export const BRAND = {
-  name: "AAUROSHE",
-  legalName: "Aauroshe Luxury Private Limited",
-  tagline: "Artisanal Luxury & Timeless Elegance",
+  name: "AaurOSHe",
+  legalName: "AaurOSHe Luxury Private Limited",
+  tagline: "As Rare As You",
   establishedYear: 2026,
   currency: "INR",
   currencySymbol: "₹",
   contact: {
     email: "concierge@aauroshe.com",
     phone: "+91 98765 43210",
-    address: "AAUROSHE Atelier, Luxury Boulevard, New Delhi, India",
+    address: "AaurOSHe Atelier, Luxury Boulevard, New Delhi, India",
     workingHours: "Monday – Saturday: 10:00 AM – 8:00 PM IST",
   },
   social: {

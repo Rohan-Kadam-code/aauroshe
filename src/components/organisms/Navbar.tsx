@@ -6,6 +6,7 @@ import { BRAND } from "@/core/constants/brand";
 import { useCart } from "@/context/CartContext";
 import { ShoppingBag, Search, Menu, X, User, Sparkles } from "lucide-react";
 import { SearchBar } from "@/components/molecules/SearchBar";
+import { Logo } from "@/components/atoms/Logo";
 
 export const Navbar: React.FC = () => {
   const { totals, openCart } = useCart();
@@ -68,16 +69,9 @@ export const Navbar: React.FC = () => {
               </div>
             </div>
 
-            {/* Center: Grand AAUROSHE Brand Monogram */}
-            <div className="text-center shrink-0 px-4">
-              <Link href="/" className="inline-block group text-center">
-                <span className="font-serif text-2xl sm:text-3xl lg:text-4xl tracking-[0.3em] font-normal text-neutral-950 block leading-none group-hover:text-amber-800 transition-colors">
-                  {BRAND.name}
-                </span>
-                <span className="text-[9px] uppercase tracking-[0.45em] text-amber-800/80 block mt-1 font-medium">
-                  Haute Maison
-                </span>
-              </Link>
+            {/* Center: Official AaurOSHe Brand Logo */}
+            <div className="text-center shrink-0 px-2 sm:px-4 py-1">
+              <Logo size="md" variant="dark" showTagline={true} />
             </div>
 
             {/* Right: Currency, Admin Portal, Shopping Bag */}

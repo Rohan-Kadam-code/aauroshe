@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { BRAND } from "@/core/constants/brand";
 import { CATEGORIES } from "@/core/constants/categories";
+import { Logo } from "@/components/atoms/Logo";
 
 export const Footer: React.FC = () => {
   return (
@@ -10,14 +11,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-block">
-              <span className="font-serif text-2xl tracking-[0.25em] text-white block">
-                {BRAND.name}
-              </span>
-              <span className="text-[9px] uppercase tracking-[0.35em] text-amber-400 block mt-0.5">
-                {BRAND.tagline}
-              </span>
-            </Link>
+            <Logo variant="light" size="md" showTagline={true} />
 
             <p className="mt-4 text-xs text-neutral-400 font-light leading-relaxed max-w-sm">
               An Indian Haute Maison dedicated to preserving rare artisanal traditions, distilling precious botanicals, and crafting eternal luxury artifacts.
