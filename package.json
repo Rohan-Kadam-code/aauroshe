@@ -1,17 +1,25 @@
 {
-  "name": "temp-app",
-  "version": "0.1.0",
+  "name": "aauroshe-luxury-ecommerce",
+  "version": "1.0.0",
   "private": true,
+  "description": "AAUROSHE — Haute Parfumerie & Luxury E-Commerce Platform",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "audit:blast-radius": "node scripts/audit-blast-radius.mjs",
+    "release:gate": "node scripts/build-gate-release.mjs"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.41.0",
     "next": "16.3.4",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "tailwind-merge": "^3.6.0",
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
