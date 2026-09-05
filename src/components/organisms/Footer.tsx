@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
           {/* Client Care & Policies */}
           <div>
             <h4 className="text-white text-[11px] uppercase tracking-[0.2em] font-medium mb-4">
-              Client Care & Gates
+              Client Care
             </h4>
             <ul className="space-y-2 font-light">
               {BRAND.policies.map((p) => (
@@ -75,11 +75,6 @@ export const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link href="/admin" className="text-amber-400/90 hover:text-amber-300 transition-colors font-medium">
-                  Admin Console & Gate Releases
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

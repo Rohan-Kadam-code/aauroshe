@@ -74,20 +74,20 @@ export const Navbar: React.FC = () => {
               <Logo size="lg" variant="dark" showTagline={true} />
             </div>
 
-            {/* Right: Currency, Admin Portal, Shopping Bag */}
+            {/* Right: Currency, Account, Shopping Bag */}
             <div className="flex items-center justify-end gap-3 sm:gap-5 flex-1">
               <span className="hidden sm:inline-block text-[11px] font-medium text-neutral-500 tracking-widest uppercase">
                 INR (₹)
               </span>
 
-              {/* Admin Portal Link */}
+              {/* Customer Account Trigger */}
               <Link
-                href="/admin"
-                className="hidden sm:flex items-center gap-1.5 text-xs text-neutral-700 hover:text-neutral-950 font-medium tracking-wider px-2 py-1 border border-neutral-200/80 hover:border-neutral-900 transition-colors"
-                title="Admin Management Console"
+                href="/account"
+                className="hidden sm:flex items-center text-neutral-700 hover:text-neutral-950 p-1.5 transition-colors"
+                aria-label="My Account"
+                title="Account"
               >
-                <User className="w-3.5 h-3.5 text-amber-800" />
-                <span className="text-[10px] uppercase tracking-widest">Admin</span>
+                <User className="w-4 h-4 text-neutral-800" />
               </Link>
 
               {/* Shopping Bag Trigger */}
@@ -143,14 +143,6 @@ export const Navbar: React.FC = () => {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                href="/admin"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-sm uppercase tracking-widest text-amber-800 font-medium py-2 flex items-center justify-between"
-              >
-                <span>Admin Management Console</span>
-                <User className="w-4 h-4" />
-              </Link>
             </nav>
           </div>
         )}
