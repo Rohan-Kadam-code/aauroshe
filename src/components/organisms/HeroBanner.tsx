@@ -1,68 +1,61 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/atoms/Button";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const HeroBanner: React.FC = () => {
   return (
-    <section className="relative min-h-[82vh] flex items-center justify-center overflow-hidden bg-[#1a080f] text-white">
-      {/* Background Luxury Editorial Image with Wine Tint Overlay */}
+    <section className="relative min-h-[75vh] sm:min-h-[82vh] flex items-center overflow-hidden bg-[#1a060d] text-white">
+      {/* Background Bespoke Luxury Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1920&auto=format&fit=crop"
-          alt="AAUROSHE Haute Parfumerie & Lifestyle"
+          src="/images/hero-bg.jpg"
+          alt="AAUROSHE Haute Parfumerie & Fine Artefacts"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-40 scale-105 animate-subtle-zoom"
+          className="object-cover object-right sm:object-center opacity-70 animate-subtle-zoom"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1e0711] via-[#2d0b19]/60 to-[#1e0711]/80" />
+        {/* Editorial Vignette Gradient to ensure perfect text contrast on left */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#19060d]/90 via-[#19060d]/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#19060d] via-transparent to-[#19060d]/60" />
       </div>
 
-      {/* Hero Content - Minimalist Editorial */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center flex flex-col items-center">
-        {/* Sub-header kicker */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-white/20 bg-white/10 backdrop-blur-md mb-6 animate-fade-in">
-          <Sparkles className="w-3 h-3 text-amber-200/80" />
-          <span className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-white/90 font-light">
-            Haute Parfumerie & Fine Artefacts
+      {/* Hero Content - Clean, Uncluttered, High-Fashion Editorial */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 sm:py-28 w-full">
+        <div className="max-w-xl text-left">
+          {/* Typographic Kicker (No SaaS pill container, no emojis) */}
+          <span className="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-rose-200/90 font-light block mb-3 sm:mb-4">
+            Haute Parfumerie & Maisons
           </span>
-        </div>
 
-        {/* Minimal Hero Title */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-normal tracking-tight text-white leading-[1.08] max-w-3xl">
-          As Rare <span className="italic font-light text-rose-100/90">As You.</span>
-        </h1>
+          {/* Minimalist Hero Title */}
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-normal tracking-tight text-white leading-[1.06]">
+            As Rare <span className="italic font-light text-rose-200/95">As You.</span>
+          </h1>
 
-        {/* Minimal 1-Line Description */}
-        <p className="mt-5 text-sm sm:text-base text-white/80 max-w-xl font-light leading-relaxed tracking-wide">
-          Hand-poured extraits, 18K fine jewellery, and considered lifestyle pieces.
-        </p>
+          {/* Minimal 1-Line Description */}
+          <p className="mt-4 sm:mt-5 text-sm sm:text-base text-white/80 font-light leading-relaxed tracking-wide max-w-md">
+            Hand-poured extraits, fine jewellery, and considered lifestyle creations.
+          </p>
 
-        {/* CTAs */}
-        <div className="mt-9 flex flex-col sm:flex-row items-center gap-4">
-          <Link href="/shop">
-            <Button variant="wine" size="lg" className="bg-[#4a1525] border-[#5c2030] hover:bg-[#380d1a] group">
-              <span>Explore Catalogue</span>
-              <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
+          {/* Refined CTAs - Single Primary Wine Button + Graceful Inline Text Link */}
+          <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-5 sm:gap-7">
+            <Link
+              href="/shop"
+              className="inline-flex items-center justify-center bg-[#4a1525] hover:bg-[#380d1a] text-white text-xs uppercase tracking-[0.25em] px-8 py-3.5 border border-[#6b2539] transition-all duration-300 shadow-md"
+            >
+              Explore Catalogue
+            </Link>
 
-          <Link href="/shop?category=perfumes">
-            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white hover:text-[#1e0711]">
+            <Link
+              href="/shop?category=perfumes"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-white/85 hover:text-white transition-colors group py-2"
+            >
               <span>The Parfumerie</span>
-            </Button>
-          </Link>
-        </div>
-
-        {/* Minimalist Hairline Strip */}
-        <div className="mt-16 pt-6 border-t border-white/15 flex items-center justify-center gap-6 sm:gap-12 text-[10px] sm:text-xs uppercase tracking-[0.25em] text-white/60 font-light">
-          <span>Pure Extraits</span>
-          <span className="opacity-30">/</span>
-          <span>18K & 925 Fine Metals</span>
-          <span className="opacity-30">/</span>
-          <span>Pan-India Concierge</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>
