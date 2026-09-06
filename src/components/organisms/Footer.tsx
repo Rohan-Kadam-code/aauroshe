@@ -6,7 +6,7 @@ import { Logo } from "@/components/atoms/Logo";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-neutral-950 text-neutral-400 text-xs border-t border-neutral-800">
+    <footer className="bg-[#19060d] text-neutral-300 text-xs border-t border-[#2e0b17]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Column */}
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
                 <li key={c.id}>
                   <Link
                     href={`/shop?category=${c.slug}`}
-                    className="hover:text-amber-300 transition-colors"
+                    className="hover:text-rose-200 transition-colors"
                   >
                     {c.name}
                   </Link>
@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
                 <li key={c.id}>
                   <Link
                     href={`/shop?category=${c.slug}`}
-                    className="hover:text-amber-300 transition-colors"
+                    className="hover:text-rose-200 transition-colors"
                   >
                     {c.name}
                   </Link>
@@ -70,7 +70,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 font-light">
               {BRAND.policies.map((p) => (
                 <li key={p.name}>
-                  <Link href={p.href} className="hover:text-amber-300 transition-colors">
+                  <Link href={p.href} className="hover:text-rose-200 transition-colors">
                     {p.name}
                   </Link>
                 </li>
@@ -79,13 +79,13 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Strip */}
-        <div className="mt-16 pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-400 font-light">
+        {/* Bottom Strip - Pure Luxury Client Guarantees (No Dev Jargon) */}
+        <div className="mt-16 pt-8 border-t border-[#2e0b17] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-400 font-light">
           <p>© {new Date().getFullYear()} {BRAND.legalName}. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <span>Secure 256-Bit SSL Protection</span>
-            <span>Razorpay Payment Verified</span>
-            <span>PCI-DSS Level 1 Compliant</span>
+          <div className="flex items-center gap-6 text-[10px] uppercase tracking-widest text-neutral-400">
+            <span>Authenticity Guaranteed</span>
+            <span>Insured Express Delivery</span>
+            <span>Private Concierge</span>
           </div>
         </div>
       </div>

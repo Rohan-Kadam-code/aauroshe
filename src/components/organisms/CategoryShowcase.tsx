@@ -6,25 +6,25 @@ import { ArrowRight } from "lucide-react";
 
 export const CategoryShowcase: React.FC = () => {
   return (
-    <section className="py-20 bg-neutral-50 border-b border-neutral-200/60">
+    <section className="py-16 sm:py-20 bg-white border-b border-[#ede6e7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        {/* Section Header - Minimalist */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 pb-4 border-b border-[#ede6e7]">
           <div>
-            <span className="text-xs uppercase tracking-[0.25em] text-amber-800 font-semibold block mb-2">
-              The Ten Maisons
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#7e3045] font-semibold block mb-1">
+              The Maisons
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif text-neutral-900 tracking-tight">
-              Curated Luxury Categories
+            <h2 className="text-2xl sm:text-3xl font-serif text-[#1e1417]">
+              Curated Categories
             </h2>
           </div>
 
           <Link
             href="/shop"
-            className="mt-4 md:mt-0 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-neutral-900 hover:text-amber-700 font-medium group transition-colors"
+            className="mt-3 sm:mt-0 inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#1e1417] hover:text-[#4a1525] font-medium group transition-colors"
           >
-            <span>View Complete Catalogue</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <span>Explore All</span>
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 

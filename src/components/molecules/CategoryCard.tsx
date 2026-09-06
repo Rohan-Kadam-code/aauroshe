@@ -30,7 +30,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category, className 
       {/* Content */}
       <div className="absolute inset-0 p-5 sm:p-6 flex flex-col justify-end text-white">
         <div className="flex items-center justify-between">
-          <span className="text-[10px] uppercase tracking-[0.25em] text-amber-300/90 font-medium">
+          <span className="text-[10px] uppercase tracking-[0.25em] text-rose-200/90 font-medium">
             {category.tagline}
           </span>
           <div className="w-7 h-7 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
@@ -38,7 +38,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category, className 
           </div>
         </div>
 
-        <h3 className="text-lg sm:text-xl font-serif font-normal text-white mt-1 group-hover:text-amber-200 transition-colors">
+        <h3 className="text-lg sm:text-xl font-serif font-normal text-white mt-1 group-hover:text-rose-100 transition-colors">
           {category.name}
         </h3>
 

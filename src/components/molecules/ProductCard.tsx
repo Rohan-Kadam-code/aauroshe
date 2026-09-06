@@ -28,11 +28,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, className }) 
   };
 
   return (
-    <div className={`group relative flex flex-col bg-white border border-neutral-200/80 hover:border-neutral-900/30 transition-all duration-500 overflow-hidden ${className || ""}`}>
+    <div className={`group relative flex flex-col bg-white border border-[#ede6e7] hover:border-[#4a1525]/35 transition-all duration-500 overflow-hidden ${className || ""}`}>
       {/* Image Container with Luxury Overlay */}
       <Link
         href={`/product/${product.slug}`}
-        className="relative aspect-[4/5] w-full bg-neutral-100 overflow-hidden block"
+        className="relative aspect-[4/5] w-full bg-[#faf8f6] overflow-hidden block"
       >
         <Image
           src={product.thumbnail}
@@ -50,11 +50,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, className }) 
         )}
 
         {/* Quick Action Overlay (Desktop) */}
-        <div className="absolute inset-0 bg-neutral-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 z-10">
+        <div className="absolute inset-0 bg-[#23060f]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 z-10">
           <button
             type="button"
             onClick={handleQuickAdd}
-            className="w-full bg-white/95 hover:bg-neutral-900 text-neutral-900 hover:text-white backdrop-blur-md py-3 px-4 text-xs font-medium uppercase tracking-widest transition-all duration-300 shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full bg-white/95 hover:bg-[#4a1525] text-[#1e1417] hover:text-white backdrop-blur-md py-3 px-4 text-xs font-medium uppercase tracking-widest transition-all duration-300 shadow-md flex items-center justify-center gap-2 cursor-pointer"
           >
             {isAdding ? (
               <>
@@ -75,14 +75,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, className }) 
       <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
         <div>
           {/* Category Tag */}
-          <span className="text-[10px] uppercase tracking-[0.2em] text-amber-800/90 font-medium block">
+          <span className="text-[10px] uppercase tracking-[0.2em] text-[#7e3045] font-semibold block">
             {product.categoryName}
           </span>
 
           {/* Title */}
           <Link
             href={`/product/${product.slug}`}
-            className="block mt-1.5 text-sm font-serif font-medium text-neutral-900 hover:text-amber-700 transition-colors line-clamp-1"
+            className="block mt-1.5 text-sm font-serif font-medium text-[#1e1417] hover:text-[#4a1525] transition-colors line-clamp-1"
           >
             {product.title}
           </Link>

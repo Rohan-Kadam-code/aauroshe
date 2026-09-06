@@ -58,10 +58,10 @@ export const CartDrawer: React.FC = () => {
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
         <div className="w-screen max-w-md bg-white shadow-2xl flex flex-col">
           {/* Header */}
-          <div className="px-6 py-5 border-b border-neutral-100 flex items-center justify-between bg-neutral-50/50">
+          <div className="px-6 py-5 border-b border-[#ede6e7] flex items-center justify-between bg-white">
             <div className="flex items-center gap-2">
-              <ShoppingBag className="w-4 h-4 text-amber-700" />
-              <h2 className="text-sm font-serif uppercase tracking-widest text-neutral-900 font-medium">
+              <ShoppingBag className="w-4 h-4 text-[#4a1525]" />
+              <h2 className="text-sm font-serif uppercase tracking-widest text-[#1e1417] font-medium">
                 Shopping Bag ({totals.itemCount})
               </h2>
             </div>
@@ -69,7 +69,7 @@ export const CartDrawer: React.FC = () => {
             <button
               type="button"
               onClick={closeCart}
-              className="p-1.5 text-neutral-400 hover:text-neutral-900 transition-colors cursor-pointer"
+              className="p-1.5 text-neutral-400 hover:text-[#4a1525] transition-colors cursor-pointer"
               aria-label="Close cart"
             >
               <X className="w-5 h-5" />
@@ -77,20 +77,20 @@ export const CartDrawer: React.FC = () => {
           </div>
 
           {/* Free Shipping Progress Indicator */}
-          <div className="bg-amber-950 text-white px-6 py-3 text-xs">
+          <div className="bg-[#380d1a] text-white px-6 py-3 text-xs">
             {amountNeededForFreeShipping === 0 ? (
-              <div className="flex items-center gap-2 text-amber-300 font-medium">
-                <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>You qualify for Complimentary White Glove Delivery!</span>
+              <div className="flex items-center gap-2 text-rose-200 font-medium">
+                <Sparkles className="w-4 h-4 text-rose-300 shrink-0" />
+                <span>You qualify for Complimentary Delivery!</span>
               </div>
             ) : (
               <div>
                 <p className="text-neutral-200">
-                  Add <strong className="text-amber-300 font-semibold">{formatINR(amountNeededForFreeShipping)}</strong> more to enjoy Complimentary Insured Delivery.
+                  Add <strong className="text-rose-200 font-semibold">{formatINR(amountNeededForFreeShipping)}</strong> more to enjoy Complimentary Insured Delivery.
                 </p>
-                <div className="w-full bg-neutral-800 h-1.5 rounded-full mt-2 overflow-hidden">
+                <div className="w-full bg-[#23060f] h-1.5 rounded-full mt-2 overflow-hidden">
                   <div
-                    className="bg-amber-400 h-full transition-all duration-500 rounded-full"
+                    className="bg-[#be6b82] h-full transition-all duration-500 rounded-full"
                     style={{ width: `${freeShippingProgress}%` }}
                   />
                 </div>
@@ -185,7 +185,7 @@ export const CartDrawer: React.FC = () => {
 
                 <div className="flex justify-between">
                   <span>Insured Delivery</span>
-                  <span>{totals.shipping === 0 ? <strong className="text-amber-800 font-semibold uppercase">Complimentary</strong> : formatINR(totals.shipping)}</span>
+                  <span>{totals.shipping === 0 ? <strong className="text-[#4a1525] font-semibold uppercase">Complimentary</strong> : formatINR(totals.shipping)}</span>
                 </div>
 
                 <div className="flex justify-between">
@@ -193,7 +193,7 @@ export const CartDrawer: React.FC = () => {
                   <span>{formatINR(totals.tax)}</span>
                 </div>
 
-                <div className="flex justify-between text-sm font-semibold text-neutral-950 pt-2 border-t border-neutral-200">
+                <div className="flex justify-between text-sm font-semibold text-[#1e1417] pt-2 border-t border-[#ede6e7]">
                   <span>Estimated Total</span>
                   <span className="text-base font-serif">{formatINR(totals.total)}</span>
                 </div>
@@ -201,7 +201,7 @@ export const CartDrawer: React.FC = () => {
 
               {/* Checkout CTA */}
               <Link href="/checkout" onClick={closeCart} className="block">
-                <Button variant="gold" size="lg" className="w-full justify-between group">
+                <Button variant="wine" size="lg" className="w-full justify-between group bg-[#4a1525] border-[#5c2030] hover:bg-[#380d1a]">
                   <span>Proceed to Checkout</span>
                   <span className="flex items-center gap-1 font-serif text-sm">
                     {formatINR(totals.total)}
@@ -212,8 +212,8 @@ export const CartDrawer: React.FC = () => {
 
               {/* Trust Badge */}
               <div className="flex items-center justify-center gap-2 text-[10px] text-neutral-400 uppercase tracking-widest pt-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-amber-600" />
-                <span>256-Bit Encrypted Razorpay Checkout</span>
+                <ShieldCheck className="w-3.5 h-3.5 text-[#7e3045]" />
+                <span>Verified Encrypted Checkout</span>
               </div>
             </div>
           )}

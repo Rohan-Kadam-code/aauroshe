@@ -17,8 +17,8 @@ export default async function HomePage() {
       <CategoryShowcase />
       <ProductGrid
         products={products}
-        title="Featured Creations"
-        subtitle="Meticulously crafted with rare materials and uncompromising attention to detail."
+        title="Signature Pieces"
+        subtitle="Distinctive silhouettes and hand-finished details."
         showFilters={true}
       />
       <NewsletterSection />

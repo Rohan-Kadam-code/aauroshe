@@ -17,8 +17,8 @@ export interface ProductGridProps {
 
 export const ProductGrid: React.FC<ProductGridProps> = ({
   products,
-  title = "Curated Masterpieces",
-  subtitle = "Handcrafted with uncompromising devotion to beauty and luxury.",
+  title = "Signature Pieces",
+  subtitle = "Considered silhouettes and distinctive design.",
   initialCategory = "all",
   showFilters = true,
 }) => {
@@ -59,20 +59,21 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
   }, [products, selectedCategory, selectedSort]);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.25em] text-amber-800 font-semibold mb-2">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Exquisite Catalogue</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-serif text-neutral-900 tracking-tight">
+        {/* Header - Minimalist */}
+        <div className="text-center max-w-xl mx-auto mb-10">
+          <span className="text-[10px] uppercase tracking-[0.25em] text-[#7e3045] font-semibold block mb-1">
+            Catalogue
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-serif text-[#1e1417]">
             {title}
           </h2>
-          <p className="text-neutral-500 text-sm sm:text-base mt-2 font-light">
-            {subtitle}
-          </p>
+          {subtitle && (
+            <p className="text-neutral-500 text-xs sm:text-sm mt-1.5 font-light">
+              {subtitle}
+            </p>
+          )}
         </div>
 
         {/* Filter Controls Strip */}
@@ -139,7 +140,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
             <button
               type="button"
               onClick={() => setSelectedCategory("all")}
-              className="mt-4 text-xs uppercase tracking-widest text-amber-800 font-semibold underline underline-offset-4 cursor-pointer"
+              className="mt-4 text-xs uppercase tracking-widest text-[#4a1525] font-semibold underline underline-offset-4 cursor-pointer"
             >
               Reset Category Filters
             </button>

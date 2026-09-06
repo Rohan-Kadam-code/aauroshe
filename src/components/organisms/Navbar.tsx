@@ -25,16 +25,14 @@ export const Navbar: React.FC = () => {
   return (
     <>
       {/* Top Privilege Announcement Bar */}
-      <div className="bg-neutral-950 text-amber-200/90 text-[11px] tracking-[0.2em] py-2 text-center uppercase font-light border-b border-amber-500/20 px-4 flex items-center justify-center gap-2">
-        <Sparkles className="w-3 h-3 text-amber-400 shrink-0" />
-        <span>Complimentary White Glove Delivery on all orders above ₹15,000</span>
-        <span className="hidden sm:inline opacity-40">|</span>
-        <span className="hidden sm:inline text-white/80">Code: AAUROSHE10 for 10% Welcome Privilege</span>
+      <div className="bg-[#4a1525] text-white/90 text-[11px] tracking-[0.25em] py-2 text-center uppercase font-light border-b border-[#380d1a] px-4 flex items-center justify-center gap-2">
+        <Sparkles className="w-3 h-3 text-amber-200/80 shrink-0" />
+        <span>Complimentary Insured Delivery Across India</span>
       </div>
 
       {/* Main Sticky Header */}
       <header
-        className={`sticky top-0 z-40 bg-white/95 backdrop-blur-md transition-all duration-300 border-b border-neutral-200/80 ${
+        className={`sticky top-0 z-40 bg-white/95 backdrop-blur-md transition-all duration-300 border-b border-[#ede6e7] ${
           isScrolled ? "shadow-sm py-2" : "py-3 sm:py-4"
         }`}
       >
@@ -48,7 +46,7 @@ export const Navbar: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="p-1.5 text-neutral-800 hover:text-neutral-950"
+                  className="p-1.5 text-neutral-800 hover:text-[#4a1525]"
                   aria-label="Toggle Navigation Menu"
                 >
                   {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5 text-neutral-900" />}
@@ -56,7 +54,7 @@ export const Navbar: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setIsSearchOpen(!isSearchOpen)}
-                  className="p-1.5 text-neutral-800 hover:text-neutral-950"
+                  className="p-1.5 text-neutral-800 hover:text-[#4a1525]"
                   aria-label="Search Catalog"
                 >
                   <Search className="w-5 h-5 text-neutral-900" />
@@ -83,23 +81,23 @@ export const Navbar: React.FC = () => {
               {/* Customer Account Trigger */}
               <Link
                 href="/account"
-                className="hidden sm:flex items-center text-neutral-700 hover:text-neutral-950 p-1.5 transition-colors"
+                className="hidden sm:flex items-center text-neutral-700 hover:text-[#4a1525] p-1.5 transition-colors"
                 aria-label="My Account"
                 title="Account"
               >
-                <User className="w-4 h-4 text-neutral-800" />
+                <User className="w-4 h-4 text-neutral-850" />
               </Link>
 
               {/* Shopping Bag Trigger */}
               <button
                 type="button"
                 onClick={openCart}
-                className="relative p-2 text-neutral-900 hover:text-amber-700 transition-colors cursor-pointer flex items-center gap-2"
+                className="relative p-2 text-neutral-900 hover:text-[#4a1525] transition-colors cursor-pointer flex items-center gap-2"
                 aria-label="View Shopping Bag"
               >
                 <ShoppingBag className="w-5 h-5" />
                 {totals.itemCount > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-amber-600 text-white text-[10px] font-semibold rounded-full flex items-center justify-center animate-scale-in">
+                  <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#4a1525] text-white text-[10px] font-semibold rounded-full flex items-center justify-center animate-scale-in">
                     {totals.itemCount}
                   </span>
                 )}
@@ -108,15 +106,15 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Bottom Row: Centered Category Navigation (Desktop) */}
-          <nav className="hidden md:flex items-center justify-center gap-8 lg:gap-10 pt-3.5 mt-2 border-t border-neutral-100">
+          <nav className="hidden md:flex items-center justify-center gap-8 lg:gap-10 pt-3.5 mt-2 border-t border-[#f4e8eb]">
             {BRAND.navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-xs uppercase tracking-[0.2em] text-neutral-700 hover:text-amber-800 transition-colors font-medium relative group py-1"
+                className="text-xs uppercase tracking-[0.2em] text-neutral-700 hover:text-[#4a1525] transition-colors font-medium relative group py-1"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-amber-600 group-hover:w-full transition-all duration-300" />
+                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#4a1525] group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
           </nav>
@@ -131,14 +129,14 @@ export const Navbar: React.FC = () => {
 
         {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed inset-x-0 top-full bg-white border-b border-neutral-200 shadow-xl px-6 py-6 animate-slide-down">
+          <div className="md:hidden fixed inset-x-0 top-full bg-white border-b border-[#ede6e7] shadow-xl px-6 py-6 animate-slide-down">
             <nav className="flex flex-col gap-4">
               {BRAND.navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-sm uppercase tracking-widest text-neutral-800 hover:text-amber-700 font-medium py-2 border-b border-neutral-100"
+                  className="text-sm uppercase tracking-widest text-neutral-800 hover:text-[#4a1525] font-medium py-2 border-b border-neutral-100"
                 >
                   {item.name}
                 </Link>

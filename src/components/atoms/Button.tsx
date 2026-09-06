@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "gold" | "danger";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "gold" | "wine" | "danger";
   size?: "sm" | "md" | "lg" | "icon";
   isLoading?: boolean;
 }
@@ -24,19 +24,22 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center justify-center font-medium tracking-wider uppercase transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber-500 disabled:pointer-events-none disabled:opacity-40 select-none cursor-pointer active:scale-[0.98]";
+      "inline-flex items-center justify-center font-medium tracking-widest uppercase transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#4a1525] disabled:pointer-events-none disabled:opacity-40 select-none cursor-pointer active:scale-[0.98]";
 
     const variants = {
       primary:
-        "bg-neutral-900 text-white hover:bg-neutral-800 border border-neutral-800 hover:border-neutral-700 shadow-sm",
+        "bg-[#4a1525] text-white hover:bg-[#380d1a] border border-[#4a1525] hover:border-[#380d1a] shadow-sm",
+      wine:
+        "bg-[#4a1525] text-white hover:bg-[#380d1a] border border-[#4a1525] hover:border-[#380d1a] shadow-sm",
       secondary:
-        "bg-neutral-100 text-neutral-900 hover:bg-neutral-200 border border-neutral-200",
-      gold: "bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-neutral-950 font-semibold hover:brightness-105 border border-amber-400/50 shadow-md shadow-amber-900/10",
+        "bg-[#faf5f6] text-[#4a1525] hover:bg-[#f4e8eb] border border-[#e8d0d6]",
+      gold:
+        "bg-gradient-to-r from-[#5c2030] via-[#4a1525] to-[#5c2030] text-white hover:brightness-110 border border-[#7e3045]/60 shadow-sm",
       outline:
-        "bg-transparent text-neutral-900 border border-neutral-900/30 hover:border-neutral-900 hover:bg-neutral-900 hover:text-white",
+        "bg-transparent text-[#1e1417] border border-[#1e1417]/25 hover:border-[#4a1525] hover:bg-[#4a1525] hover:text-white",
       ghost:
-        "bg-transparent text-neutral-700 hover:text-neutral-950 hover:bg-neutral-100/70",
-      danger: "bg-red-600 text-white hover:bg-red-700 border border-red-700",
+        "bg-transparent text-neutral-700 hover:text-[#4a1525] hover:bg-[#faf5f6]",
+      danger: "bg-red-700 text-white hover:bg-red-800 border border-red-800",
     };
 
     const sizes = {

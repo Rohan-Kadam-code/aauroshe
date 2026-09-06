@@ -13,7 +13,7 @@ export interface StorefrontLayoutProps {
 export const StorefrontLayout: React.FC<StorefrontLayoutProps> = ({ children }) => {
   return (
     <CartProvider>
-      <div className="min-h-screen flex flex-col bg-white text-neutral-900 selection:bg-amber-200 selection:text-amber-950 font-sans antialiased">
+      <div className="min-h-screen flex flex-col bg-white text-[#1e1417] selection:bg-[#4a1525] selection:text-white font-sans antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>
         <CartDrawer />

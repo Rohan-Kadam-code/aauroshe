@@ -23,8 +23,8 @@ export const FilterPill: React.FC<FilterPillProps> = ({
       className={cn(
         "inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs tracking-wider uppercase transition-all duration-200 cursor-pointer border select-none whitespace-nowrap",
         isActive
-          ? "bg-neutral-900 text-amber-300 border-neutral-900 shadow-sm"
-          : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-400 hover:text-neutral-950",
+          ? "bg-[#4a1525] text-white border-[#4a1525] shadow-sm"
+          : "bg-[#faf8f6] text-neutral-750 border-[#ede6e7] hover:border-[#4a1525] hover:text-[#4a1525]",
         className
       )}
     >
@@ -32,8 +32,8 @@ export const FilterPill: React.FC<FilterPillProps> = ({
       {count !== undefined && (
         <span
           className={cn(
-            "text-[10px] px-1.5 py-0.2 rounded-full",
-            isActive ? "bg-neutral-800 text-amber-200" : "bg-neutral-100 text-neutral-500"
+            "text-[10px] px-1.5 py-0.5 rounded-full font-light",
+            isActive ? "bg-[#380d1a] text-rose-100" : "bg-white text-neutral-500 border border-[#ede6e7]"
           )}
         >
           {count}

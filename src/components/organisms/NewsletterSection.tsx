@@ -15,42 +15,39 @@ export const NewsletterSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-neutral-950 text-white relative overflow-hidden">
-      {/* Subtle Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
+    <section className="py-16 sm:py-20 bg-[#260812] text-white relative overflow-hidden border-t border-[#3d0e1c]">
+      {/* Subtle Background Glow in Wine */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#5c2030]/20 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-500/30 bg-neutral-900/80 mb-4">
-          <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-          <span className="text-[10px] uppercase tracking-[0.25em] text-amber-300 font-medium">
-            Private Atelier Invitations
-          </span>
-        </div>
+      <div className="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span className="text-[10px] uppercase tracking-[0.3em] text-rose-200/80 font-light block mb-2">
+          Atelier Privileges
+        </span>
 
-        <h2 className="text-2xl sm:text-4xl font-serif font-normal text-white">
-          Join the AAUROSHE Circle
+        <h2 className="text-2xl sm:text-3xl font-serif font-normal text-white">
+          The Circle.
         </h2>
 
-        <p className="mt-3 text-xs sm:text-sm text-neutral-400 max-w-xl mx-auto font-light leading-relaxed">
-          Receive exclusive invitations to private seasonal salons, limited flacon releases, and early previews of bespoke jewelry collections.
+        <p className="mt-2 text-xs sm:text-sm text-white/70 max-w-md mx-auto font-light leading-relaxed">
+          Quiet updates on rare extrait releases and private salon appointments. No noise.
         </p>
 
         {submitted ? (
-          <div className="mt-8 inline-flex items-center gap-2 bg-neutral-900 border border-amber-500/50 px-6 py-3 text-amber-300 text-xs uppercase tracking-widest">
-            <Check className="w-4 h-4 text-emerald-400" />
-            <span>Welcome to the Circle. Please verify your invitation in your inbox.</span>
+          <div className="mt-6 inline-flex items-center gap-2 bg-[#380d1a] border border-[#5c2030] px-5 py-2.5 text-rose-200 text-xs tracking-widest uppercase">
+            <Check className="w-3.5 h-3.5 text-emerald-400" />
+            <span>Welcome. Your invitation is reserved.</span>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <form onSubmit={handleSubmit} className="mt-6 flex flex-col sm:flex-row gap-2.5 max-w-md mx-auto">
             <input
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address..."
-              className="flex-1 bg-neutral-900 border border-neutral-800 px-4 py-3 text-xs text-white placeholder:text-neutral-500 focus:outline-none focus:border-amber-500/80"
+              placeholder="Enter your email address"
+              className="flex-1 bg-white/5 border border-white/15 px-4 py-3 text-xs text-white placeholder:text-white/40 focus:outline-none focus:border-rose-300/60"
             />
-            <Button type="submit" variant="gold" size="md">
+            <Button type="submit" variant="wine" size="md" className="bg-[#4a1525] border-[#6b2539] hover:bg-[#5c2030]">
               Subscribe
             </Button>
           </form>
